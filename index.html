@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Swiper.js pour un carrousel interactif -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Utilisateurs</a></li>
+                <li><a href="#">Ventes</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Paramètres</a></li>
+            </ul>
+        </section>
+
+        <section class="content">
+            <h1>Dashboard Administrateur</h1>
+            
+            <!-- Statistiques utilisateurs -->
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Utilisateurs Totaux</h3>
+                    <p id="totalUsers">1200</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Nouveaux Utilisateurs</h3>
+                    <p id="newUsers">50</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Utilisateurs Actifs</h3>
+                    <p id="activeUsers">950</p>
+                </div>
+            </div>
+
+            <!-- Graphiques -->
+            <div class="card-container">
+                <div class="card">
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="card">
+                    <canvas id="userGrowthChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recherche en direct -->
+            <div class="search-bar">
+                <input type="text" id="liveSearch" placeholder="Rechercher..." />
+                <div id="searchResults"></div>
+            </div>
+
+            <!-- Notifications -->
+            <section class="notifications">
+                <h2>Notifications Récentes</h2>
+                <ul>
+                    <li>Nouvelle commande reçue de l'utilisateur John Doe</li>
+                    <li>Un utilisateur a modifié ses informations</li>
+                    <li>Nouvelle inscription : Jane Smith</li>
+                    <li>Erreur système sur la page de paiement</li>
+                </ul>
+            </section>
+
+            <!-- Messages -->
+            <section class="messages">
+                <h2>Derniers Messages</h2>
+                <div class="message">
+                    <strong>John Doe:</strong> "J'ai des questions sur ma commande."
+                </div>
+                <div class="message">
+                    <strong>Jane Smith:</strong> "Le site est lent, pouvez-vous l'améliorer?"
+                </div>
+            </section>
+
+            <!-- Actions récentes -->
+            <section class="recent-actions">
+                <h2>Actions Récentes</h2>
+                <ul>
+                    <li>Utilisateur John Doe a changé son mot de passe.</li>
+                    <li>Ajout de 10 nouveaux produits dans le catalogue.</li>
+                    <li>Création d'un nouvel abonnement mensuel.</li>
+                    <li>Suppression d'un compte inactif : Mike Tyson.</li>
+                </ul>
+            </section>
+
+            <!-- Carrousel -->
+            <section class="carousel">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

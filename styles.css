@@ -1,0 +1,532 @@
+/* 🌈 Variables CSS */
+:root {
+    --primary-blue: #0056b3;
+    --accent-orange: #ff8c00;
+    --text-white: #ffffff;
+    --text-dark: #333333;
+    --bg-light: #f8f9fa;
+    --transition: all 0.3s ease;
+}
+
+/* 🏗️ Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 🏗️ Header Principal */
+header {
+    background-color: var(--primary-blue);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a {
+    display: block;
+}
+
+header img {
+    height: 50px;
+    width: auto;
+}
+
+/* 🧭 Navigation Principale */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav > ul > li {
+    position: relative;
+}
+
+nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    display: block;
+    transition: var(--transition);
+}
+
+/* 🔽 Sous-menus */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--text-dark);
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    border-top: 3px solid var(--accent-orange);
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* ✨ Effets Hover */
+nav > ul > li > a:hover {
+    color: var(--text-dark);
+}
+
+nav ul ul a:hover {
+    color: var(--accent-orange);
+    padding-left: 5px;
+}
+
+/* 🔍 Barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 0.6rem 1rem;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-bar button:hover {
+    background: var(--accent-orange);
+}
+/* Conteneur des résultats */
+.search-results {
+    position: absolute;
+    top: 50px; /* Positionne les résultats sous la barre de recherche */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+/* Chaque élément de résultat */
+.search-results .result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.search-results .result-item:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* 📱 Version Mobile */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 2%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 1rem;
+    }
+
+    .search-bar input {
+        flex-grow: 1;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul ul {
+        position: relative;
+    }
+
+    /* Menu déroulant (sous-menu) */
+    nav ul li {
+        position: relative;
+        padding: 0.5rem;
+    }
+
+    nav ul li > a {
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    /* Affichage du sous-menu sur mobile */
+    nav ul li:hover > ul {
+        display: block;
+        position: static;
+        box-shadow: none;
+    }
+}
+
+/* 🏗️ Style du Swiper */
+.swiper-container {
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+}
+
+/* 🖼️ Images */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🔘 Pagination */
+.swiper-pagination-bullet {
+    background-color: var(--accent-orange);
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-blue);
+    opacity: 1;
+}
+
+/* 🧭 Boutons de navigation */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-blue);
+    background-color: var(--bg-light);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--accent-orange);
+    color: var(--text-white);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .banner {
+    background: linear-gradient(to right, #A4CB1E, #1A3A75);
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+  }
+
+  .banner span {
+    color: #A4CB1E; /* Vert clair pour "Moi" */
+    font-weight: bold;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .service {
+    max-width: 250px;
+    margin-bottom: 40px;
+  }
+
+  .service-icon {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #1A3A75;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .service-icon img {
+    width: 60px;
+    height: auto;
+  }
+
+  .service-title {
+    color: #1A3A75;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .service-desc {
+    color: #000;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  .section-sim {
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  .section-sim h2 {
+    font-size: 1.4rem;
+    color: #1A3A75;
+  }
+
+  .highlight-green {
+    color: #9ACD32;
+    font-weight: bold;
+  }
+
+  .app-buttons {
+    margin: 20px 0;
+  }
+
+  .app-buttons img {
+    width: 150px;
+    margin: 0 10px;
+  }
+
+  .sim-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .sim-left {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+  }
+
+  .sim-left img {
+    width: 250px;
+  }
+
+  .sim-right {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .sim-right h3 {
+    color: #1A3A75;
+    font-size: 1.3rem;
+  }
+
+  .sim-right h3 .highlight-green {
+    font-weight: bold;
+  }
+
+  .sim-right p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .sim-right p strong {
+    color: #1A3A75;
+  }
+
+  .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #1A3A75;
+    border: 2px solid #1A3A75;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background: #1A3A75;
+    color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sim-content {
+      flex-direction: column;
+    }
+    .sim-right {
+      text-align: center;
+    }
+  }
+
+  /* 🎯 Section Offres */
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+  }
+  
+  .container .slogan {
+    font-size: 1.1rem;
+    color: var(--accent-orange);
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+  
+  /* 🎞️ Swiper Slides */
+  .mySwiper {
+    width: 100%;
+    padding-bottom: 60px;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiper-slide:hover {
+    transform: scale(1.02);
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  /* 📝 Contenu des offres */
+  .slide-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 86, 179, 0.7); /* var(--primary-blue) semi-transparent */
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    transition: var(--transition);
+  }
+  
+  .offer-type {
+    font-size: 0.9rem;
+    color: #ffcc70;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  
+  .offer-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .offer-link {
+    color: var(--text-white);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+  
+  .offer-link:hover {
+    color: var(--accent-orange);
+  }
+  
+  /* 🔘 Navigation Swiper */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--primary-blue);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: var(--accent-orange);
+    color: white;
+  }
+  
+  /* 🔘 Pagination */
+  .swiper-pagination-bullet {
+    background: var(--accent-orange);
+    opacity: 0.7;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: var(--primary-blue);
+    opacity: 1;
+  }
+  
+  /* 📱 Responsive */
+  @media screen and (max-width: 768px) {
+    .container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .slide-content {
+      padding: 15px;
+    }
+  
+    .offer-name {
+      font-size: 1.2rem;
+    }
+  }
+  

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celtiis</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Intégration de Swiper CSS depuis un CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="/img/logo.png" alt="Logo Celtiis">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li>
+                    <a href="#">Celtiis</a>
+                    <ul>
+                        <li><a href="#">Le mobile</a></li>
+                        <li><a href="#">e-Sim</a></li>
+                        <li><a href="#">Ma carte SIM</a></li>
+                        <li><a href="#">La fibre</a></li>
+                        <li><a href="#">Mon abonnement FTTH</a></li>
+                        <li><a href="#">Ma facture</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Celtiis Business</a>
+                    <ul>
+                        <li><a href="#">Communiquer</a></li>
+                        <li><a href="#">Se Connecter</a></li>
+                        <li><a href="#">Digitaliser</a></li>
+                        <li><a href="#">Interconnecter</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Celtiis Cash</a></li>
+                <li>
+                    <a href="#">Celtiis Partenaires</a>
+                    <ul>
+                        <li><a href="#">Devenir partenaire Celtiis Cash</a></li>
+                        <li><a href="#">Découvrez nos partenaires business</a></li>
+                        <li><a href="#">Notre politique complice</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Celtiis et vous</a>
+                    <ul>
+                        <li><a href="#">Recrutements</a></li>
+                        <li><a href="#">Appels d'offres</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Rechercher...">
+            <button type="submit" id="search-btn">Rechercher</button>
+        </div>
+        
+        <!-- Conteneur pour afficher les résultats de recherche -->
+        <div id="search-results" class="search-results"></div>
+        
+    </header>
+
+    <!-- Conteneur du Swiper -->
+    <div class="swiper-container">
+        <!-- Wrapper des slides -->
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <img src="/img/celtiis-business-1.webp" alt="Image 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <img src="/img/celtiis-illiminet-slider-01.webp" alt="Image 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img src="/img/F8Pb6L3XAAA6iwD.jpg" alt="Image 3">
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <img src="/img/celtiis-slider-04.webp" alt="Image 4">
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    
+  <div class="banner">
+    100% <span>Moi</span>
+  </div>
+
+  <section class="services">
+    <div class="service">
+      <div class="service-icon">
+        <img src="/img/celtiis-hiw-1.svg" alt="Mobile & Fixe">
+      </div>
+      <div class="service-title">Mobile & fixe</div>
+      <div class="service-desc">Appels à petits prix et <br>internet en abondance</div>
+    </div>
+
+    <div class="service">
+      <div class="service-icon">
+        <img src="/img/celtiis-hiw-2.svg" alt="Connexion haut débit">
+      </div>
+      <div class="service-title">Connexion haut débit</div>
+      <div class="service-desc">Le haut débit vous ouvre <br>ses portes</div>
+    </div>
+
+    <div class="service">
+      <div class="service-icon">
+        <img src="/img/celtiis-hiw-3.svg" alt="Mobile Money">
+      </div>
+      <div class="service-title">Mobile Money</div>
+      <div class="service-desc">Vos transactions <br>financières instantanées <br>et sécurisées</div>
+    </div>
+  </section>
+
+
+  <section class="section-sim">
+    <h2>Des services innovants pour vous faciliter la vie, téléchargez 
+      <span class="highlight-green">MyCeltis cash</span> et profitez des bons plans du moment.
+    </h2>
+    <p>Application disponible sur Playstore et Appstore</p>
+
+    <div class="app-buttons">
+      <img src="/img/6 Tips for Telling Your Significant Other About Your Mental Illness.jpg" alt="Google Play">
+      <img src="/img/aa.jpg" alt="App Store">
+    </div>
+
+    <div class="sim-content">
+      <div class="sim-left">
+        <img src="/img/celtiis-sim-pic.png" alt="Carte SIM avec personne">
+      </div>
+      <div class="sim-right">
+        <h3>Pas encore de Sim? <br><span class="highlight-green">Précommandez-là</span></h3>
+        <p>
+          Vous avez la possibilité de <strong>commander votre sim depuis n’importe quel endroit</strong> en remplissant le formulaire.<br><br>
+          Ne perdez plus de temps !
+        </p>
+        <button class="cta-button">Précommandez votre sim →</button>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <h1>Découvrez les différentes offres mobiles et internet pour vous.</h1>
+    <p class="slogan">Choisissez plus qu'un réseau, choisissez Celtiis</p>
+    
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slide 1 - Internet -->
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Internet haut débit">
+                <div class="slide-content">
+                    <p class="offer-type">Internet</p>
+                    <h3 class="offer-name">IllimìNet</h3>
+                    <a href="#" class="offer-link">En savoir plus sur l'offre</a>
+                </div>
+            </div>
+            
+            <!-- Slide 2 - Mobile -->
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Voyage international">
+                <div class="slide-content">
+                    <p class="offer-type">Mobile</p>
+                    <h3 class="offer-name">Pass roaming voyage</h3>
+                    <a href="#" class="offer-link">En savoir plus sur l'offre</a>
+                </div>
+            </div>
+            
+            <!-- Slide 3 - Mobile -->
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Forfait mobile">
+                <div class="slide-content">
+                    <p class="offer-type">Mobile</p>
+                    <h3 class="offer-name">My Mix</h3>
+                    <a href="#" class="offer-link">En savoir plus sur l'offre</a>
+                </div>
+            </div>
+            
+            <!-- Vous pouvez ajouter d'autres slides ici -->
+        </div>
+        
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // Initialisation du Swiper
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
+</script>
+
+    <!-- Charger Swiper.js depuis le CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        // Initialisation de Swiper avec l'effet Cube
+        const swiper = new Swiper('.swiper-container', {
+            loop: true, // Le carrousel boucle à la fin
+            effect: 'cube', // Effet 3D cube
+            cubeEffect: {
+                shadow: true, // Ombre sur les côtés
+                slideShadows: true, // Ombre sur les slides
+                shadowOffset: 20, // Décalage de l'ombre
+                shadowScale: 0.94, // Échelle de l'ombre
+            },
+            autoplay: {
+                delay: 5000, // Temps entre chaque transition (5 secondes)
+                disableOnInteraction: false, // Ne pas désactiver l'autoplay lors de l'interaction
+            },
+            speed: 1500, // Temps pour chaque transition (1.5 secondes)
+            slidesPerView: 1, // Afficher une seule image à la fois
+            spaceBetween: 0, // Pas d'espace entre les slides
+            pagination: {
+                el: '.swiper-pagination', // Pagination en dessous des slides
+                clickable: true, // Permet de cliquer sur la pagination
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // Bouton suivant
+                prevEl: '.swiper-button-prev', // Bouton précédent
+            }
+        });
+
+        $(document).ready(function() {
+    // Lorsque l'utilisateur tape dans la barre de recherche
+    $('#search-input').on('keyup', function() {
+        var query = $(this).val(); // Récupérer la valeur de la barre de recherche
+
+        if (query.length > 2) { // Lancer la recherche si la longueur du texte est supérieure à 2
+            // Faire une requête AJAX
+            $.ajax({
+                url: 'search.php', // L'URL du fichier PHP qui effectue la recherche (voir plus bas)
+                method: 'GET',
+                data: { query: query }, // Envoyer la requête
+                success: function(response) {
+                    // Afficher les résultats dans le conteneur
+                    $('#search-results').html(response).show();
+                },
+                error: function() {
+                    $('#search-results').html('<div class="result-item">Erreur lors de la recherche</div>');
+                }
+            });
+        } else {
+            // Cacher les résultats si la requête est vide ou trop courte
+            $('#search-results').hide();
+        }
+    });
+
+    // Optionnel: Lorsque l'utilisateur clique sur un élément de résultat
+    $(document).on('click', '.result-item', function() {
+        $('#search-input').val($(this).text()); // Remplir l'input avec l'élément sélectionné
+        $('#search-results').hide(); // Cacher les résultats
+    });
+});
+
+    </script>
+
+    
+
+</body>
+</html>
